@@ -1,0 +1,26 @@
+<form ngForm #assignmentsForm class="form">
+    <mat-form-field>
+        <input matInput #assignmentName [(ngModel)]="title" name="title" placeholder="Title">
+    </mat-form-field>
+<mat-form-field>
+        <input matInput #assignmentName [(ngModel)]="imdbid" name="imdbid" placeholder="IMDBID">
+    </mat-form-field>
+
+	<mat-form-field>
+		<input matInput #assignmentName [(ngModel)]="year" name="year" placeholder="Year">
+	</mat-form-field>
+
+
+<!--
+    <mat-form-field>
+    	<input matInput [matDatepicker]="picker" 
+    	[(ngModel)]="dueDate" name="name" 
+    	placeholder="Movie Date">
+
+    	<mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+-->
+
+	<button mat-stroked-button [disabled]="enabled" (click)="onSubmit(); assignmentsForm.reset()" routerLink="/home" color="primary">Add Movie</button>
+</form>
