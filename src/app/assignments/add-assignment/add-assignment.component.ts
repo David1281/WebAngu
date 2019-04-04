@@ -7,10 +7,27 @@ import {AssignmentsService} from '../../shared/assignments.service';
   styleUrls: ['./add-assignment.component.css']
 })
 export class AddAssignmentComponent implements OnInit {
-  title: string; 
-  imdbid: string; 
-  year: string;
-  dueDate:  Date;
+    id:number;
+    title: string;
+    imdblD: number; 
+    spanishTitle: string; 
+    imdbPictureURL: string; //Blob 
+    year: number;
+    rtID: string; 
+    rtAllCriticsRating: number; 
+    rtAllCriticsNumReviews: number; 
+    rtAllCriticsNumFresh: number; 
+    rtAllCriticsNumRotten: number; 
+    rtAllCriticsScore: number;
+    rtTopCriticsRating: number; 
+    rtTopCriticsNumReviews: number; 
+    rtTopCriticsNumFresh: number; 
+    rtTopCriticsNumRotten: number;
+    rtTopCriticsScore: number;
+    rtAudienceRating: number;
+    rtAudienceNumRatings: number; 
+    rtAudienceScore: number; 
+    rtPictureURL: string;
 
   //@Output() newAssignment = new EventEmitter<Assignment>();
   newAssignment:Assignment; 
@@ -19,38 +36,55 @@ export class AddAssignmentComponent implements OnInit {
   ngOnInit() {
   }
 
-  assignments: Assignment[] =[{
-   id:1,
-   title:'One',
-   imdbid: '5',
-   year: '2010',
-   //dueDate: new Date('2018-01-01'),
-   submitted:true
-  },
+  assignments: Assignment[] =[
   {
     id:2,
-   title:'Two',
-   imdbid: '5',
-   year: '2010',
-   //dueDate: new Date('2018-01-01'),
-   submitted:false
-  },
-  {
-   id:3,
-   title:'Two',
-   imdbid: '5',
-   year: '2010',
-   //dueDate: new Date('2018-01-01'),
-   submitted:false
+    title: 'One',
+    imdblD: 2, 
+    spanishTitle: 'One', 
+    imdbPictureURL: 'One', //Blob 
+    year: 2,
+    rtID: 'One',
+    rtAllCriticsRating: 2,
+    rtAllCriticsNumReviews: 2,
+    rtAllCriticsNumFresh: 2,
+    rtAllCriticsNumRotten: 2,
+    rtAllCriticsScore: 2,
+    rtTopCriticsRating: 2,
+    rtTopCriticsNumReviews: 2, 
+    rtTopCriticsNumFresh: 2,
+    rtTopCriticsNumRotten: 2,
+    rtTopCriticsScore: 2,
+    rtAudienceRating: 2,
+    rtAudienceNumRatings: 2,
+    rtAudienceScore: 2, 
+    rtPictureURL: 'One', //Blob
+
   }];
 
  onSubmit(){
     const assignment = new Assignment();
+    assignment.id = Math.floor(Math.random() * 1000);
     assignment.title = this.title;
-    assignment.imdbid = this.imdbid;
+    assignment.imdblD = this.imdblD;
+    assignment.spanishTitle = this.spanishTitle; 
+    assignment.imdbPictureURL = this.imdbPictureURL; 
     assignment.year = this.year;
-    assignment.submitted = false;
-
+    assignment.rtID= this.rtID;
+    assignment.rtAllCriticsRating= this.rtAllCriticsRating;
+    assignment.rtAllCriticsNumReviews= this.rtAllCriticsNumReviews;
+    assignment.rtAllCriticsNumFresh= this.rtAllCriticsNumFresh;
+    assignment.rtAllCriticsNumRotten= this.rtAllCriticsNumRotten;
+    assignment.rtAllCriticsScore= this.rtAllCriticsScore;
+    assignment.rtTopCriticsRating= this.rtTopCriticsRating;
+    assignment.rtTopCriticsNumReviews= this.rtTopCriticsNumReviews;
+    assignment.rtTopCriticsNumFresh= this.rtTopCriticsNumFresh;
+    assignment.rtTopCriticsNumRotten= this.rtTopCriticsNumRotten;
+    assignment.rtTopCriticsScore= this.rtTopCriticsScore;
+    assignment.rtAudienceRating= this.rtAudienceRating;
+    assignment.rtAudienceNumRatings= this.rtAudienceNumRatings;
+    assignment.rtAudienceScore= this.rtAudienceScore;
+    assignment.rtPictureURL= this.rtPictureURL;
     //this.newAssignment.emit(assignment);
     this.assignmentService.addAssignments(assignment);
   }

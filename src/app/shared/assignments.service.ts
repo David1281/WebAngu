@@ -8,21 +8,50 @@ import {LoggingService} from './logging.service';
 export class AssignmentsService {
 
   assignments: Assignment[] =[{
-   id:1,
-   title:'Maths',
-   imdbid:'5',
-   year:'2010',
-
-   //dueDate: new Date('2018-01-01'),
-   submitted:true
+   id:2,
+    title: 'One',
+    imdblD: 2, 
+    spanishTitle: 'One', 
+    imdbPictureURL: 'One', //Blob 
+    year: 2,
+    rtID: 'One',
+    rtAllCriticsRating: 2,
+    rtAllCriticsNumReviews: 2,
+    rtAllCriticsNumFresh: 2,
+    rtAllCriticsNumRotten: 2,
+    rtAllCriticsScore: 2,
+    rtTopCriticsRating: 2,
+    rtTopCriticsNumReviews: 2, 
+    rtTopCriticsNumFresh: 2,
+    rtTopCriticsNumRotten: 2,
+    rtTopCriticsScore: 2,
+    rtAudienceRating: 2,
+    rtAudienceNumRatings: 2,
+    rtAudienceScore: 2, 
+    rtPictureURL: 'One',
   },
   {
-    id:2,
-  	title:'Science',
-    imdbid:'5',
-    year:'2010',
-  	//dueDate: new Date('2019-01-01'),
-  	submitted:false
+    id:3,
+    title: 'One',
+    imdblD: 2, 
+    spanishTitle: 'One', 
+    imdbPictureURL: 'One', //Blob 
+    year: 2,
+    rtID: 'One',
+    rtAllCriticsRating: 2,
+    rtAllCriticsNumReviews: 2,
+    rtAllCriticsNumFresh: 2,
+    rtAllCriticsNumRotten: 2,
+    rtAllCriticsScore: 2,
+    rtTopCriticsRating: 2,
+    rtTopCriticsNumReviews: 2, 
+    rtTopCriticsNumFresh: 2,
+    rtTopCriticsNumRotten: 2,
+    rtTopCriticsScore: 2,
+    rtAudienceRating: 2,
+    rtAudienceNumRatings: 2,
+    rtAudienceScore: 2, 
+    rtPictureURL: 'One',
   }];
 
   constructor(private loggingService: LoggingService) { }
