@@ -57,6 +57,7 @@ export class AssignmentsService {
 
 
   url = 'http://localhost:8010/api/movies';
+  url2 = 'http://localhost:8010/api/movie';
 
   constructor(private loggingService: LoggingService,
               private http: HttpClient) { }
@@ -67,7 +68,8 @@ export class AssignmentsService {
     return this.http.get<Assignment[]>(this.url);
   }
   getAssignment(id:number): Observable<Assignment>{
-  	return of (this.assignments.find(x=> x.id === id));
+  	//return of (this.assignments.find(x=> x.id === id));
+    return this.http.get<Assignment>(this.url2 + '/' + id);
   }
 
   addAssignments(assignment:Assignment):Observable<string>{

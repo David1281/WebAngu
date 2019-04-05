@@ -5,7 +5,7 @@
 <div class="container" *ngIf="passedAssignment">
 	<mat-card>
 		<mat-card-title>{{passedAssignment.title}}</mat-card-title>
-        <mat-card-subtitle>{{passedAssignment.imdbid}}</mat-card-subtitle>
+        <mat-card-subtitle>{{passedAssignment.spanishTitle}}</mat-card-subtitle>
         <mat-card-content>Sinopsis</mat-card-content> 
         <div id="bottom">
         <mat-checkbox *ngIf="passedAssignment.submitted===false"(click)="onAssignmentSubmitted()">mark as submit</mat-checkbox>

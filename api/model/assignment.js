@@ -25,4 +25,4 @@ let AssignmentSchema = Schema({
     rtPictureURL: String
 });
 
-module.exports = mongoose.model('Movie', AssignmentSchema);
+module.exports = mongoose.model('Movies', AssignmentSchema);
