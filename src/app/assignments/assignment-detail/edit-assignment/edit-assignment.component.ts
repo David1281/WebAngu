@@ -45,25 +45,63 @@ export class EditAssignmentComponent implements OnInit {
   }
   onSaveAssignment(){
   	if(this.title){
-  		this.assignment.title = this.title;
+  	this.assignment.title = this.title;
+    }
+    if(this.imdblD){
     this.assignment.imdblD = this.imdblD;
+    }
+    if(this.spanishTitle){
     this.assignment.spanishTitle = this.spanishTitle; 
+    }
+    if(this.imdbPictureURL){
     this.assignment.imdbPictureURL = this.imdbPictureURL; 
+    }
+    if(this.year){
     this.assignment.year = this.year;
+    }
+    if(this.rtID){
     this.assignment.rtID= this.rtID;
+    } 
+    if(this.rtAllCriticsRating){
     this.assignment.rtAllCriticsRating= this.rtAllCriticsRating;
+    }
+    if(this.rtAllCriticsNumReviews){
     this.assignment.rtAllCriticsNumReviews= this.rtAllCriticsNumReviews;
+    }
+    if(this.rtAllCriticsNumFresh){
     this.assignment.rtAllCriticsNumFresh= this.rtAllCriticsNumFresh;
+    }
+    if(this.rtAllCriticsNumRotten){
     this.assignment.rtAllCriticsNumRotten= this.rtAllCriticsNumRotten;
+    }
+    if(this.rtAllCriticsScore){
     this.assignment.rtAllCriticsScore= this.rtAllCriticsScore;
+    }
+    if(this.rtTopCriticsRating){
     this.assignment.rtTopCriticsRating= this.rtTopCriticsRating;
+    }
+    if(this.rtTopCriticsNumReviews){
     this.assignment.rtTopCriticsNumReviews= this.rtTopCriticsNumReviews;
+    }
+    if(this.rtTopCriticsNumFresh){
     this.assignment.rtTopCriticsNumFresh= this.rtTopCriticsNumFresh;
+    }
+    if(this.rtTopCriticsNumRotten){
     this.assignment.rtTopCriticsNumRotten= this.rtTopCriticsNumRotten;
+    }
+    if(this.rtTopCriticsScore){
     this.assignment.rtTopCriticsScore= this.rtTopCriticsScore;
+    }
+    if(this.rtAudienceRating){
     this.assignment.rtAudienceRating= this.rtAudienceRating;
+    }
+    if(this.rtAudienceNumRatings){
     this.assignment.rtAudienceNumRatings= this.rtAudienceNumRatings;
+    }
+    if(this.rtAudienceScore){
     this.assignment.rtAudienceScore= this.rtAudienceScore;
+    }
+    if(this.rtPictureURL){
     this.assignment.rtPictureURL= this.rtPictureURL;
   	}
     /*
@@ -71,8 +109,9 @@ export class EditAssignmentComponent implements OnInit {
   		this.assignment.dueDate = this.dueDate;
   	}*/
 
-    this.assignmentsService.updateAssignments(this.assignment).subscribe(assignment => console.log(this.assignment.title + 'updated'));
-    this.router.navigate(['/home']);
+    this.assignmentsService.updateAssignments(this.assignment)
+    .subscribe(assignment => this.router.navigate(['/assignment/' + this.assignment.id]));
+    
   }
 
 }

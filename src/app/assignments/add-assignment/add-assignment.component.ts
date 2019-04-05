@@ -1,6 +1,7 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import {Assignment} from '../assignment.model';
 import {AssignmentsService} from '../../shared/assignments.service';
+import {Router} from '@angular/router'
 @Component({
   selector: 'app-add-assignment',
   templateUrl: './add-assignment.component.html',
@@ -31,7 +32,8 @@ export class AddAssignmentComponent implements OnInit {
 
   //@Output() newAssignment = new EventEmitter<Assignment>();
   newAssignment:Assignment; 
-  constructor(private assignmentService: AssignmentsService) { }
+  constructor(private assignmentService: AssignmentsService,
+              private router: Router) { }
 
   ngOnInit() {
   }
@@ -64,7 +66,7 @@ export class AddAssignmentComponent implements OnInit {
 
  onSubmit(){
     const assignment = new Assignment();
-    assignment.id = Math.floor(Math.random() * 1000);
+    assignment.id = Math.floor(Math.random() * 1000) + 10000;
     assignment.title = this.title;
     assignment.imdblD = this.imdblD;
     assignment.spanishTitle = this.spanishTitle; 
@@ -86,7 +88,8 @@ export class AddAssignmentComponent implements OnInit {
     assignment.rtAudienceScore= this.rtAudienceScore;
     assignment.rtPictureURL= this.rtPictureURL;
     //this.newAssignment.emit(assignment);
-    this.assignmentService.addAssignments(assignment);
+    this.assignmentService.addAssignments(assignment)
+    .subscribe(res => this.router.navigate(['/home']));
   }
 
 }

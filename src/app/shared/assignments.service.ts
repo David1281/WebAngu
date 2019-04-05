@@ -72,33 +72,37 @@ export class AssignmentsService {
     return this.http.get<Assignment>(this.url2 + '/' + id);
   }
 
-  addAssignments(assignment:Assignment):Observable<string>{
-    this.assignments.push(assignment);
+  addAssignments(assignment:Assignment):Observable<any>{
+    //this.assignments.push(assignment);
 
-    this.loggingService.log(assignment.title,'added');
+    //this.loggingService.log(assignment.title,'added');
 
-    return of('assignment added!');
+    //return of('assignment added!');
+    return this.http.post<Assignment>(this.url2, assignment);
   }
 
-  updateAssignments(assignment:Assignment):Observable<string>{
-    this.assignments.forEach((assignment,i)=>{
-      if(assignment === assignment){
-        this.assignments[i] = assignment;
-      }
-    });
+  updateAssignments(assignment:Assignment):Observable<any>{
+    //this.assignments.forEach((assignment,i)=>{
+      ///if(assignment === assignment){
+       // this.assignments[i] = assignment;
+     // }
+   // });
 
-    this.loggingService.log(assignment.title,'updated');
-    return of('assignment updated!');
+   // this.loggingService.log(assignment.title,'updated');
+   // return of('assignment updated!');
+   return this.http.put<Assignment>(this.url2,assignment);
   }
   
-  deleteAssignment(deletedAssignment: Assignment): Observable<string>{
-    this.assignments.forEach((assignment, i)=>{
-      if(assignment === deletedAssignment){
-        this.assignments.splice(i,1);
-      }
-    });
-    this.loggingService.log(deletedAssignment.title,'deleted');
-    return of('assignment deleted');
+  deleteAssignment(deletedAssignment: Assignment): Observable<any>{
+    //this.assignments.forEach((assignment, i)=>{
+     // if(assignment === deletedAssignment){
+     //   this.assignments.splice(i,1);
+     // }
+   // });
+   // this.loggingService.log(deletedAssignment.title,'deleted');
+   // return of('assignment deleted');
+   const newUrl = this.url2 + '/' + deletedAssignment._id;
+   return this.http.delete(newUrl);
   }
 
 

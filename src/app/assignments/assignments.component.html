@@ -9,10 +9,7 @@
 <mat-list *ngFor="let assignment of assignments">
 	<nav><a routerLink="/assignment/{{assignment.id}}">
 	<mat-list-item (click)="setSelected(assignment)">
-	<p>{{assignment.id}}</p>
-	<p>{{assignment._id}}</p>
 	<p>{{assignment.title}}</p>
-	<p>{{assignment.imdblD}}</p>
 	  <mat-divider></mat-divider>
    </mat-list-item>
 </a></nav>

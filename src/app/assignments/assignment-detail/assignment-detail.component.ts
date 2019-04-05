@@ -38,14 +38,14 @@ export class AssignmentDetailComponent implements OnInit {
    }
 
    onDelete(){
-     this.assignmentsService.deleteAssignment(this.passedAssignment).subscribe(res=>console.log(res));
+     this.assignmentsService.deleteAssignment(this.passedAssignment).subscribe(res => this.router.navigate(['/home']));
      //this.passedAssignment = null; 
-     this.router.navigate(['/home']);
+     
    }
 
 
    onClickEdit(){
-     this.router.navigate(['/assignment',this.passedAssignment.id,'edit'],
+     this.router.navigate(['/movie',this.passedAssignment.id,'edit'],
        {queryParams:{name:this.passedAssignment.title},fragment:'editing'});
    }
 
