@@ -34,7 +34,7 @@ export class AssignmentDetailComponent implements OnInit {
 
    onAssignmentSubmitted(){
      this.assignmentsService.updateAssignments(this.passedAssignment).subscribe(success=>console.log(success));
-   	this.passedAssignment.submitted = true;
+   	//this.passedAssignment.submitted = true;
    }
 
    onDelete(){

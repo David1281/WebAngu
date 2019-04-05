@@ -1,13 +1,62 @@
 <div class="container" *ngIf="assignment">
-	<h1>Editing Assignment {{assignment.name}}</h1>
+	<h1>Editing Movie {{assignment.title}}</h1>
 	<form ngForm class="form">
 		<mat-form-field>
-			<input matInput
-			  placeholder="Edit the assignments name"
-			  [(ngModel)]="assignmentName"
-			  name="assignment-name">
+	    <input matInput placeholder="Edit the Title" [(ngModel)]="title"
+			  name="title">
 		</mat-form-field>
         <mat-form-field>
+        <input matInput #assignmentName [(ngModel)]="imdblD" name="imdblD" placeholder="Edit the IMDBID">
+      </mat-form-field>
+
+	<mat-form-field>
+		<input matInput #assignmentName [(ngModel)]="spanishTitle" name="spanishTitle" placeholder="Edit the Spanish Title">
+	</mat-form-field>
+    <mat-form-field>
+        <input matInput #assignmentName [(ngModel)]="imdbPictureURL" name="imdbPictureURL" placeholder="Edit the IMD Picture URL">
+    </mat-form-field>
+
+    <mat-form-field>
+            <input matInput #assignmentName [(ngModel)]="year" name="year" placeholder="Edit the Year">
+        </mat-form-field>
+
+    <mat-form-field>
+            <input matInput #assignmentName [(ngModel)]="rtID" name="rtID" placeholder="Edit the RT ID">
+        </mat-form-field>
+
+    <mat-form-field>
+            <input matInput #assignmentName [(ngModel)]="rtAllCriticsRating" name="rtAllCriticsRating" placeholder="Edit the All Critics Rating">
+        </mat-form-field>
+
+    <mat-form-field>
+            <input matInput #assignmentName [(ngModel)]="rtAllCriticsNumReviews" name="rtAllCriticsNumReviews" placeholder="Edit the All Critics Num Reviews">
+        </mat-form-field>
+
+    <mat-form-field>
+            <input matInput #assignmentName [(ngModel)]="rtAllCriticsNumFresh" name="rtAllCriticsNumFresh" placeholder="Edit the All Critics Num Fresh">
+        </mat-form-field>
+
+    <mat-form-field>
+            <input matInput #assignmentName [(ngModel)]="rtAllCriticsNumRotten" name="rtAllCriticsNumRotten" placeholder="Edit the All Critics Num Rotten">
+        </mat-form-field>
+
+    <mat-form-field>
+            <input matInput #assignmentName [(ngModel)]="rtTopCriticsScore" name="rtTopCriticsScore"        placeholder="Edit the Top Critics Score">
+        </mat-form-field>
+    <mat-form-field>
+            <input matInput #assignmentName [(ngModel)]="rtAudienceRating" name="rtAudienceRating"         placeholder="Edit the Audience Rating">
+        </mat-form-field>
+
+    <mat-form-field>
+            <input matInput #assignmentName [(ngModel)]="rtAudienceNumRatings" name="rtAudienceNumRatings" placeholder="Edit the Audience Num Ratings">
+        </mat-form-field>
+    <mat-form-field>
+            <input matInput #assignmentName [(ngModel)]="rtAudienceScore" name="rtAudienceScore" placeholder="Edit the Audience Score">
+        </mat-form-field>
+    <mat-form-field>
+            <input matInput #assignmentName [(ngModel)]="rtPictureURL" name="rtPictureURL" placeholder="Edit the Picture URL">
+        </mat-form-field>
+        <!--<mat-form-field>
 			<input matInput
 			  [matDatepicker]="picker"
 			  [(ngModel)]="dueDate"
@@ -15,7 +64,13 @@
 			  placeholder="Edit the assignment due date">
 		<mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
 		<mat-datepicker #picker></mat-datepicker>
-		</mat-form-field>
+		</mat-form-field>-->
+
+
+
+
+
+
     <button mat-raised-button color="primary"
            (click)="onSaveAssignment()">Save Assignment
            </button>   
