@@ -5,8 +5,27 @@
 <div class="container" *ngIf="passedAssignment">
 	<mat-card>
 		<mat-card-title>{{passedAssignment.title}}</mat-card-title>
-        <mat-card-subtitle>{{passedAssignment.spanishTitle}}</mat-card-subtitle>
-        <mat-card-content>Sinopsis</mat-card-content> 
+        <mat-card-subtitle>{{passedAssignment.spanishTitle}} (Spanish Title)</mat-card-subtitle>
+        <mat-card-content>
+             IMD Id: <p>{{passedAssignment.imdblD}}</p>
+             IMD Picture URL: <p>{{passedAssignment.imdbPictureURL}}</p>
+             Year: <p>{{passedAssignment.year}}</p>
+             RT Id:<p>{{passedAssignment.rtID}}</p><br>
+             RT All Critics Rating:<p>{{passedAssignment.rtAllCriticsRating}}</p>
+             RT All Critics Number Reviews:<p>{{passedAssignment.rtAllCriticsNumReviews}}</p>
+             RT All Critics Number Fresh:<p>{{passedAssignment.rtAllCriticsNumFresh}}</p>
+             RT All Critics Number Rotten:<p>{{passedAssignment.rtAllCriticsNumRotten}}</p>
+             <!--RT All Critics Score:<p>{{passedAssignment.rtAllCriticsScore}}</p>
+             <p>{{passedAssignment.rtTopCriticsRating}}</p>
+             RT Top Critics Number Reviews:<p>{{passedAssignment.rtTopCriticsNumReviews}}</p>
+             RT Top Critics Number Fresh:<p>{{passedAssignment.rtTopCriticsNumFresh}}</p>
+             RT Top Critics Number Rotten:<p>{{passedAssignment.rtTopCriticsNumRotten}}</p>-->
+             RT Top Critics Score:<p>{{passedAssignment.rtTopCriticsScore}}</p>
+             RT Audience Rating:<p>{{passedAssignment.rtAudienceRating}}</p>
+             RT Audience Number Ratings:<p>{{passedAssignment.rtAudienceNumRatings}}</p>
+             RT Audience Score:<p>{{passedAssignment.rtAudienceScore}}</p><br>
+             RT Picture URL:<p>{{passedAssignment.rtPictureURL}}</p>
+        </mat-card-content> 
         <div id="bottom">
         <mat-checkbox *ngIf="passedAssignment.submitted===false"(click)="onAssignmentSubmitted()">mark as submit</mat-checkbox>
 
