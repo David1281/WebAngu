@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {Assignment} from '../assignments/assignment.model';
 import {Observable, of} from 'rxjs';
 import {LoggingService} from './logging.service';
+import {HttpClient} from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
@@ -54,11 +55,16 @@ export class AssignmentsService {
     rtPictureURL: 'One',
   }];
 
-  constructor(private loggingService: LoggingService) { }
+
+  url = 'http://localhost:8010/api/movies';
+
+  constructor(private loggingService: LoggingService,
+              private http: HttpClient) { }
 
 
   getAssignments(): Observable<Assignment[]>{
-    return of(this.assignments);
+    //return of(this.assignments);
+    return this.http.get<Assignment[]>(this.url);
   }
   getAssignment(id:number): Observable<Assignment>{
   	return of (this.assignments.find(x=> x.id === id));

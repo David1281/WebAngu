@@ -53,7 +53,8 @@
     <mat-form-field>
             <input matInput #assignmentName [(ngModel)]="rtPictureURL" name="rtPictureURL" placeholder="Picture URL">
         </mat-form-field>
-
+     <button  mat-stroked-button (click)="imgFileInput.click()" color="primary">Add a Poster</button>
+       <input hidden type="file" #imgFileInput (change)="previewImage($event)"/>
 <!--
     <mat-form-field>
     	<input matInput [matDatepicker]="picker" 
