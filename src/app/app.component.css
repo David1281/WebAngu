@@ -3,9 +3,13 @@
    flex-direction: row;
    align-items: center;
    justify-content: space-between;
-   margin: 0 8px 2.5em 8px;
   
+   font-size: 15;
 
 
 }
 
+.Title{
+  align-items: center;
+  
+}

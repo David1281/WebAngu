@@ -3,14 +3,14 @@
         <input matInput #assignmentName [(ngModel)]="title" name="title" placeholder="Title">
     </mat-form-field>
     <mat-form-field>
-        <input matInput #assignmentName [(ngModel)]="imdblD" name="imdblD" placeholder="IMDBID">
+        <input matInput #assignmentName [(ngModel)]="imdblD" name="imdblD" placeholder="IMDB ID">
     </mat-form-field>
 
 	<mat-form-field>
 		<input matInput #assignmentName [(ngModel)]="spanishTitle" name="spanishTitle" placeholder="Spanish Title">
 	</mat-form-field>
     <mat-form-field>
-        <input matInput #assignmentName [(ngModel)]="imdbPictureURL" name="imdbPictureURL" placeholder="IMD Picture URL">
+        <input matInput #assignmentName [(ngModel)]="imdbPictureURL" name="imdbPictureURL" placeholder="IMDB Picture URL">
     </mat-form-field>
 
     <mat-form-field>
@@ -41,6 +41,18 @@
             <input matInput #assignmentName [(ngModel)]="rtTopCriticsScore" name="rtTopCriticsScore"        placeholder="Top Critics Score">
         </mat-form-field>
     <mat-form-field>
+            <input matInput #assignmentName [(ngModel)]="rtTopCriticsRating" name="rtTopCriticsRating"        placeholder="Top Critics Rating">
+        </mat-form-field>
+    <mat-form-field>
+            <input matInput #assignmentName [(ngModel)]="rtTopCriticsNumReviews" name="rtTopCriticsNumReviews"        placeholder="Top Critics Num Reviews">
+        </mat-form-field>
+    <mat-form-field>
+            <input matInput #assignmentName [(ngModel)]="rtTopCriticsNumFresh" name="rtTopCriticsNumFresh"        placeholder="Top Critics Num Fresh">
+        </mat-form-field>
+    <mat-form-field>
+            <input matInput #assignmentName [(ngModel)]="rtTopCriticsNumRotten" name="rtTopCriticsNumRotten"        placeholder="Top Critics Num Rotten">
+        </mat-form-field>
+    <mat-form-field>
             <input matInput #assignmentName [(ngModel)]="rtAudienceRating" name="rtAudienceRating"         placeholder="Audience Rating">
         </mat-form-field>
 
@@ -53,8 +65,6 @@
     <mat-form-field>
             <input matInput #assignmentName [(ngModel)]="rtPictureURL" name="rtPictureURL" placeholder="Picture URL">
         </mat-form-field>
-     <button  mat-stroked-button (click)="imgFileInput.click()" color="primary">Add a Poster</button>
-       <input hidden type="file" #imgFileInput (change)="previewImage($event)"/>
 <!--
     <mat-form-field>
     	<input matInput [matDatepicker]="picker" 

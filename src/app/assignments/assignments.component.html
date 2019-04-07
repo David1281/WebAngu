@@ -1,3 +1,4 @@
+<style type="text/css">a {text-decoration: none}</style>
 <main class="container" >
 
 <div class="addBtn">
@@ -9,7 +10,7 @@
 <mat-list *ngFor="let assignment of assignments">
 	<nav><a routerLink="/assignment/{{assignment.id}}">
 	<mat-list-item (click)="setSelected(assignment)">
-	<p>{{assignment.title}}</p>
+	<p><img src="{{assignment.rtPictureURL}}" style="width:45px; height:45px"> <font size="10">Title: {{assignment.title}}    IMDB Id: {{assignment.imdblD}}</font></p>
 	  <mat-divider></mat-divider>
    </mat-list-item>
 </a></nav>

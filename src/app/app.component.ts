@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   title = 'my-dream-app';
-  appName = 'Movies';
+  appName = 'MOVIES';
 
   constructor(private authService:AuthService,
   	private router:Router){}  

@@ -45,7 +45,7 @@ export class AssignmentDetailComponent implements OnInit {
 
 
    onClickEdit(){
-     this.router.navigate(['/movie',this.passedAssignment.id,'edit'],
+     this.router.navigate(['/assignment',this.passedAssignment.id,'edit'],
        {queryParams:{name:this.passedAssignment.title},fragment:'editing'});
    }
 

@@ -43,6 +43,18 @@
     <mat-form-field>
             <input matInput #assignmentName [(ngModel)]="rtTopCriticsScore" name="rtTopCriticsScore"        placeholder="Edit the Top Critics Score">
         </mat-form-field>
+        <mat-form-field>
+            <input matInput #assignmentName [(ngModel)]="rtTopCriticsRating" name="rtTopCriticsRating"        placeholder="Top Critics Rating">
+        </mat-form-field>
+    <mat-form-field>
+            <input matInput #assignmentName [(ngModel)]="rtTopCriticsNumReviews" name="rtTopCriticsNumReviews"        placeholder="Top Critics Num Reviews">
+        </mat-form-field>
+    <mat-form-field>
+            <input matInput #assignmentName [(ngModel)]="rtTopCriticsNumFresh" name="rtTopCriticsNumFresh"        placeholder="Top Critics Num Fresh">
+        </mat-form-field>
+    <mat-form-field>
+            <input matInput #assignmentName [(ngModel)]="rtTopCriticsNumRotten" name="rtTopCriticsNumRotten"        placeholder="Top Critics Num Rotten">
+        </mat-form-field>
     <mat-form-field>
             <input matInput #assignmentName [(ngModel)]="rtAudienceRating" name="rtAudienceRating"         placeholder="Edit the Audience Rating">
         </mat-form-field>
@@ -73,7 +85,7 @@
 
 
     <button mat-raised-button color="primary"
-           (click)="onSaveAssignment()">Save Assignment
+           (click)="onSaveAssignment()">Update Movie
            </button>   
 </form>
 </div>
